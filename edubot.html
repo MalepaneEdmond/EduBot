@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBot Chat</title>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #webchat {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="webchat"></div>
+    <script>
+        const directLine = window.WebChat.createDirectLine({
+            secret:'1GD8fK60N9RkZJmhn35dROzjxkgcN245OjIGyFTNm10xDESbUbb2JQQJ99BCACi5YpzAArohAAABAZBS3Nuj.CAti55uZ72VygVK2g6LgxQNsJYZRDRrnTWXwt4ZjpgEXsZ9ireuXJQQJ99BCACi5YpzAArohAAABAZBSC8mM' // Replace with your Direct Line Secret
+        });
+
+        window.WebChat.renderWebChat({
+            directLine: directLine
+        }, document.getElementById('webchat'));
+    </script>
+</body>
+</html>
